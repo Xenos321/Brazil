@@ -1,10 +1,32 @@
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
     padding-top: 70px;
-    background-color: #f0f8ff;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.home {
+    background-image: url("images/home-bg.jpg");
+}
+
+body.about {
+    background-image: url("images/about-bg/.jpg");
+}
+
+body.tourism {
+    background-image: url("images/tourism.jpg");
+}
+
+body.festival {
+    background-image: url(images/);
+}
+
+body.sports {
+    background-image: url(images/);
 }
 
 nav {
@@ -20,10 +42,8 @@ nav {
     gap: 20px;
     font-family: 'Arial', sans-serif;
     text-align: center;
-    overflow: auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 nav a {
     text-decoration: none;
@@ -32,46 +52,12 @@ nav a {
     padding: 10px 15px;
     border-radius: 15px;
     margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
     transition: background 0.3s;
 }
 
 nav a:hover {
     background-color: #00c3ff;
     color: white;
-}
-
-.content {
-    padding: 20px;
-}
-
-img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-
-body.about {
-    background-color: #fafafa;
-}
-
-body.tourism {
-    background-color: #eef;
-}
-
-body.festival {
-    background-color: #fff0f5;
-}
-
-body.sports {
-    background-color: #e6ffe6;
 }
 
 nav .logo {
@@ -85,65 +71,80 @@ nav img.logo-img {
     border-radius: 5px;
 }
 
-.card {
-    max-width: 1000px;
-    margin: 30px auto;
+.fancy-card {
+    padding: 20px;
     background: white;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin: 40px auto;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    font-family: 'Arial', sans-serif;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    max-width: 900px;
+    font-family: 'Quicksand', sans-serif;
 }
 
-
-.card-header {
-    background: linear-gradient(to right, #f7ce00, #00c3ff);
-    padding: 20px;
+.fancy-card-header {
+    margin: -20px -20px 10px -20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 12px 20px;
     color: white;
-    font-size: 24px;
     font-weight: bold;
+    font-size: 40px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.card img {
-    width: 100%;
-    max-width: 400px;
-    object-fit: cover;
-    border-right: 1px solid #ddd;
+.fancy-card-header span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+.fancy-card-header .header-icon {
+    font-size: 30px;
 }
 
-.card-body {
+.fancy-card-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
+}
+
+.fancy-card-content img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.fancy-card-text {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.card-body h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.fancy-card-text h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
 }
 
-.card-body p {
+.fancy-card-text p {
     font-size: 16px;
     color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-.card-footer {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card-footer .btn {
-    padding: 10px 20px;
+.btn {
+    padding: 8px 16px;
     border: 2px solid #000;
     background: transparent;
     border-radius: 25px;
@@ -152,20 +153,101 @@ nav img.logo-img {
     transition: 0.3s;
 }
 
-.card-footer .btn:hover {
+.btn:hover {
     background: #000;
     color: white;
 }
 
-.card-footer .icons {
+.card-footer {
     display: flex;
-    gap: 15px;
-    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-
+.icons {
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
 }
 
+.sports-section {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.player-scroller {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.player-card {
+    min-width: 200px;
+    aspect-ratio: 2 / 3; /* Portrait card */
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.player-img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.player-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.player-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 70%);
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+
+.player-info h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+
+.player-info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
