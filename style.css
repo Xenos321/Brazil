@@ -10,23 +10,79 @@ body {
 }
 
 body.home {
-    background-image: url("images/home-bg.jpg");
+    background: linear-gradient(to bottom, #00b09b, #96c93d);
 }
 
 body.about {
-    background-image: url("images/about-bg/.jpg");
+    background: linear-gradient(to bottom, #f7ff00, #db36a4); 
 }
 
 body.tourism {
-    background-image: url("images/tourism.jpg");
+    background: linear-gradient(to bottom, #43cea2, #185a9d); 
 }
 
 body.festival {
-    background-image: url(images/);
+    background: linear-gradient(to bottom, #f83600, #f9d423); 
 }
 
 body.sports {
-    background-image: url(images/);
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+}
+
+.top-banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.top-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.top-banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    font-family: 'Poppins', sans-serif;
+}
+
+.subheading-box-blur {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav {
@@ -81,6 +137,13 @@ nav img.logo-img {
     width: 90%;
     max-width: 900px;
     font-family: 'Quicksand', sans-serif;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.fancy-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    z-index: 2;
 }
 
 .fancy-card-header {
