@@ -266,7 +266,7 @@ nav img.logo-img {
 
 .player-card {
     min-width: 200px;
-    aspect-ratio: 2 / 3; /* Portrait card */
+    aspect-ratio: 2 / 3;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
